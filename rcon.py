@@ -23,10 +23,11 @@ class MCRcon(object):
 
     'with'语句例子:
     In [1]: from mcrcon import MCRcon
-    In [2]: with MCRcon("这是一个ip", "这是rcon的密码","这是Rcon的端口" ) as mcr:
+    In [2]: with MCRcon("这是一个ip", "这是rcon的密码","这是Rcon的端口") as mcr:
        ...:     resp = mcr.command("/发送给服务端的指令")
        ...:     print(resp) #输出
 
+#ip和密码均为str，需要单引号或者双引号，而端口应该为int类型，不需要双引号
 	
 	两行泪方式:
 	你当然也可以不用python的'with'语句，但是一定要在建立连接后，及时的断开连接。
